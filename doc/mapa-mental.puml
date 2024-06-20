@@ -1,0 +1,34 @@
+@startmindmap
+
+* Tienda Ropita
+** Prenda
+*** Tipo
+**** Saco
+**** Pantalon
+**** Camisa
+*** Precio Base
+*** Precio Venta
+**** Estado
+***** Nueva: en este caso no modifican el precio base
+***** Promocion: le resta un valor fijo decidido por el usuario
+***** Liquidacion: es un 50% del valor del producto
+** Venta
+*** Fecha
+*** Items Venta
+**** Prenda
+**** Precio Venta
+**** Cantidad
+*** Metodo de pago
+**** Efectivo
+***** Suma de todos los items del precio * cantidad
+**** Tarjeta
+***** Cantidad de cuotas
+***** Coeficiente
+***** En el caso que sea con tarjeta, tienen el mismo comportamiento que en efectivo (el cual no modifica el precio), solo que se le aplica un recargo según la cantidad de cuotas seleccionadas (cantidad de cuotas * un coeficiente fijo + 0.01 del valor de cada prenda).
+
+** Cliente
+*** Nombre
+*** Apellido
+** Calular ganancias de un dia
+
+@endmindmap
