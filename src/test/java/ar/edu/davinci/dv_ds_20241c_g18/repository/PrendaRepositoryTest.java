@@ -1,4 +1,5 @@
 package ar.edu.davinci.dv_ds_20241c_g18.repository;
+
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import java.util.Optional;
@@ -9,11 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import ar.edu.davinci.dv_ds_20241c_g18.domain.Prenda;
 import ar.edu.davinci.dv_ds_20241c_g18.domain.TipoPrenda;
+
 @SpringBootTest
 class PrendaRepositoryTest {
 	private final Logger LOGGER = LoggerFactory.getLogger(PrendaRepositoryTest.class);
 	@Autowired
 	private PrendaRepository prendaRepository;
+
 	@Test
 	void testFindAll() {
 		assertNotNull(prendaRepository, "El repositorio es nulo.");
@@ -22,6 +25,7 @@ class PrendaRepositoryTest {
 		assertNotNull(prendas, "prendas es nulo");
 		assertTrue(prendas.size() > 0, "No existen prendas.");
 	}
+
 	@Test
 	void testFindById() {
 		Long id = 4L;
@@ -40,5 +44,3 @@ class PrendaRepositoryTest {
 		}
 	}
 }
-
-
